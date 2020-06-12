@@ -1,11 +1,15 @@
 # CORD-19
 
-CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.
+CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our arXiv preprint for an in-depth description of how it was created:  https://arxiv.org/abs/2004.10706
 
 *We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for finding and reading papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
 
 
 *While CORD-19 was initially released on 2020-03-13, the current schema is defined base on an update on 2020-05-26.  Older versions of CORD-19 will not necessarily adhere to exactly the schema defined in this README.  Please reach out for help on this if working with old CORD-19 versions.*
+
+### Download
+
+Download CORD-19 at https://www.semanticscholar.org/cord19/download.
 
 ### Overview
 
@@ -148,4 +152,29 @@ We view these as different attempts/views to represent the same paper/document. 
 
 #### Why can the same `sha` appear for different `cord_uid`?
 Let’s take a look at examples `cord_uid=d9v5xtx7` and `cord_uid=8avkjc84`. They both share PDF `sha=5d0d0bd116976e1412c10a84902894999df4a342`. These are two papers we sourced from Elsevier. If you follow the URLs, you’ll notice that they actually retrieve the same PDF despite different having different DOIs. This is an upstream error from the publisher, which we can’t necessarily do anything about. Hopefully the number of these cases is small.
+
+### Contact
+
+Please email `lucyw@allenai.org` and `kylel@allenai.org` for any questions or concerns.
+
+### Citing CORD-19
+
+Please cite our preprint https://arxiv.org/abs/2004.10706 if using our corpus for your work.  The BibTeX is below:
+
+```
+@misc{wang-lo-2020-cord19,
+    title={{CORD-19: The Covid-19 Open Research Dataset}},
+    author={Lucy Lu Wang and Kyle Lo and Yoganand Chandrasekhar and Russell Reas and Jiangjiang Yang and Darrin Eide and Kathryn Funk and Rodney Kinney and Ziyang Liu and William Merrill and Paul Mooney and Dewey Murdick and Devvret Rishi and Jerry Sheehan and Zhihong Shen and Brandon Stilson and Alex D. Wade and Kuansan Wang and Chris Wilhelm and Boya Xie and Douglas Raymond and Daniel S. Weld and Oren Etzioni and Sebastian Kohlmeier},
+    year={2020},
+    eprint={2004.10706},
+    archivePrefix={arXiv},
+    primaryClass={cs.DL}
+}
+```
+
+
+### Mailing list
+
+Subscribe to notifications about CORD-19 at:  https://share.hsforms.com/1cM7MMF68RqCdbBKTcyN7VQ3ioxm
+
 

@@ -25,7 +25,72 @@ The files in each version are:
 - `document_parses.tar.gz`: A collection of JSON files that contain full text parses of a subset of CORD-19 papers
 - `metadata.csv`: Metadata for all CORD-19 papers.
 
-### Usage
+When `cord_19_embeddings.tar.gz` is uncompressed, it is a CSV file with two fields:  `(cord_uid, document vector weights)`.
+
+When `document_parses.tar.gz` is uncompressed, it is a directory:
+
+```
+|-- document_parses/
+    |-- pdf_json/
+        |-- 80013c44d7d2d3949096511ad6fa424a2c740813.json
+        |-- bfe20b3580e7c539c16ce4b1e424caf917d3be39.json
+        |-- ...
+    |-- pmc_json/
+        |-- PMC7096781.xml.json
+        |-- PMC7118448.xml.json
+        |-- ...
+```
+
+### Example usage
+
+We recommend everyone primarily use `metadata.csv` & augment data when needed with full text in `document_parses/`.  For example, let's say we wanted to collect a bunch of Titles, Abstracts, and Introductions of papers.  In Python, such a script might look like:
+
+```
+import csv
+import os
+import json
+from collections import defaultdict
+
+cord_uid_to_text = defaultdict(list)
+
+# open the file
+with open('metadata.csv') as f_in:
+    reader = csv.DictReader(f_in)
+    for row in reader:
+    
+        # access some metadata
+        cord_uid = row['cord_uid']
+        title = row['title']
+        abstract = row['abstract']
+        authors = row['authors'].split('; ')
+
+        # access the full text (if available) for Intro
+        introduction = []
+        if row['pdf_json_files']:
+            for json_path in row['pdf_json_files'].split('; '):
+                with open(json_path) as f_json:
+                    full_text_dict = json.load(f_json)
+                    
+                    # grab introduction section from *some* version of the full text
+                    for paragraph_dict in full_text_dict['body_text']:
+                        paragraph_text = paragraph_dict['text']
+                        section_name = paragraph_dict['section']
+                        if 'intro' in section_name.lower():
+                            introduction.append(paragraph_text)
+
+                    # stop searching other copies of full text if already got introduction
+                    if introduction:
+                        break
+
+        # save for later usage
+        cord_uid_to_text[cord_uid].append({
+            'title': title,
+            'abstract': abstract,
+            'introduction': introduction
+        })
+```
+
+### `metadata.csv` overview
 
 We recommend everyone work with `metadata.csv` as the starting point.  This file is comma-separated with the following columns:
 

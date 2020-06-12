@@ -2,6 +2,9 @@
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.
 
+*We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for finding and reading papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
+
+
 *While CORD-19 was initially released on 2020-03-13, the current schema is defined base on an update on 2020-05-26.  Older versions of CORD-19 will not necessarily adhere to exactly the schema defined in this README.  Please reach out for help on this if working with old CORD-19 versions.*
 
 ### Overview
@@ -40,6 +43,8 @@ When `document_parses.tar.gz` is uncompressed, it is a directory:
         |-- PMC7118448.xml.json
         |-- ...
 ```
+
+
 
 ### Example usage
 
@@ -114,4 +119,33 @@ We recommend everyone work with `metadata.csv` as the starting point.  This file
 - `url`: A `List[str]`-valued field containing all URLs associated with this paper.  Semicolon-separated.
 - `s2_id`:  A `str`-valued field containing the Semantic Scholar ID for this paper.  Can be used with the Semantic Scholar API (e.g. `s2_id=9445722` corresponds to `http://api.semanticscholar.org/corpusid:9445722`)
 
+
+### Questions about CORD-19
+
+#### Why can the same `cord_uid` appear in multiple rows?
+This is a very tricky issue, and we have not decided on the best way forward. To explain, let’s take example `cord_uid=hox2xwjg`. Examining their respective rows in the metadata file, we see that they are the same paper, but sent from different sources (Elsevier, PMC). The Elsevier row has DOI and PDF, but the PMC row doesn’t. Furthermore, the PMC ID, publication date, and URL for each of these rows is different.
+
+Technically all of this data is representative of paper `hox2xwjg` so we don’t want to remove any of it. But combining them into one cluster would require a schema change to the data, which would break a lot of people’s code. Hopefully this is not too big an issue because there are only a small percentage of papers affected, but know that this issue exists and we’re debating what’s the best way forward.
+
+#### Why do the PMC JSONs not contain any abstracts, yet the PDF JSONs contain abstracts?
+
+Abstracts in the metadata.csv file are “gold” provided directly from publishers or digital archives. Because PMC is very consistent at providing us “gold” abstracts, we do not bother with parsing the PMC XMLs for abstract text (it’s already in the metadata.csv). As such, the PMC JSONs do not contain abstracts. This is not the case for PDF JSONs. We often obtain PDFs through crawling, and in this manner, we would not have “gold” abstracts provided to us. As such, we still opt to parse the PDF for abstract text, which is why that field exists.
+
+#### Why do the title/authors in the JSON look different from what’s in the metadata file?
+
+The most likely reason is PDF parsing errors. Occasionally, publishers will have different metadata from what is actually displayed on the PDF itself (e.g. slight differences in author names). We encourage users to use fields in the metadata file by default and only fall back on the JSON when it is missing.
+
+#### Why is the JSON missing certain metadata, like publication dates?
+
+The JSONs are only meant for representing the full text of the PDF in a structured, machine-readable format. Many metadata fields like dates and venues don’t commonly appear on the PDF. Please defer to the metadata file for all such fields, since these come from the publishers directly.
+
+
+#### How do you handle paper objects like tables, figures, equations?
+We currently release only the main body text content of these papers, which does not include tables and figures. We’re currently looking into how to best support these. As for equations, we do not do anything special here – the symbols are treated as text and should be included in the text blobs.
+
+#### What should we do if both PDF and PMC JSONs exist?  Or if there are multiple PDF JSONs?
+We view these as different attempts/views to represent the same paper/document.  Some are going to be higher quality than others.  Treat these are separate representations of the same document – you can choose to use one, both, neither (i.e. just use the metadata fields).  On average, we believe the PMC JSONs are cleaner than the PDF JSONs but that’s not necessarily true. 
+
+#### Why can the same `sha` appear for different `cord_uid`?
+Let’s take a look at examples `cord_uid=d9v5xtx7` and `cord_uid=8avkjc84`. They both share PDF `sha=5d0d0bd116976e1412c10a84902894999df4a342`. These are two papers we sourced from Elsevier. If you follow the URLs, you’ll notice that they actually retrieve the same PDF despite different having different DOIs. This is an upstream error from the publisher, which we can’t necessarily do anything about. Hopefully the number of these cases is small.
 

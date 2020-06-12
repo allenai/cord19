@@ -32,7 +32,13 @@ The files in each version are:
 - `document_parses.tar.gz`: A collection of JSON files that contain full text parses of a subset of CORD-19 papers
 - `metadata.csv`: Metadata for all CORD-19 papers.
 
-When `cord_19_embeddings.tar.gz` is uncompressed, it is a CSV file with two fields:  `(cord_uid, document vector weights)`.
+When `cord_19_embeddings.tar.gz` is uncompressed, it is a 769-column CSV file, where the first column is the `cord_uid` and the remaining columns correspond to a 768-dimensional document embedding.  For example:
+
+```
+ug7v899j,-2.939983606338501,-6.312200546264648,-1.0459030866622925,5.164162635803223,-0.32564637064933777,-2.507413387298584,1.735608696937561,1.9363566637039185,0.622501015663147,1.5613162517547607,...
+```
+
+
 
 When `document_parses.tar.gz` is uncompressed, it is a directory:
 

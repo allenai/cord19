@@ -185,6 +185,6 @@ Subscribe to notifications about CORD-19 at:  https://share.hsforms.com/1cM7MMF6
 
 ### Projects using CORD-19
 
-Google Sheet tracking [Systems and Demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing)
+Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.* 
 
 Missing yours?  Email us!

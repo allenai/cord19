@@ -159,7 +159,13 @@ We view these as different attempts/views to represent the same paper/document. 
 #### Why can the same `sha` appear for different `cord_uid`?
 Let’s take a look at examples `cord_uid=d9v5xtx7` and `cord_uid=8avkjc84`. They both share PDF `sha=5d0d0bd116976e1412c10a84902894999df4a342`. These are two papers we sourced from Elsevier. If you follow the URLs, you’ll notice that they actually retrieve the same PDF despite different having different DOIs. This is an upstream error from the publisher, which we can’t necessarily do anything about. Hopefully the number of these cases is small.
 
-### Contact
+# Contact
+
+### Mailing list
+
+Subscribe to notifications about CORD-19 at:  https://share.hsforms.com/1cM7MMF68RqCdbBKTcyN7VQ3ioxm
+
+### Email
 
 Please email `lucyw@allenai.org` and `kylel@allenai.org` for any questions or concerns.
 
@@ -179,12 +185,8 @@ Please cite our preprint https://arxiv.org/abs/2004.10706 if using our corpus fo
 ```
 
 
-### Mailing list
-
-Subscribe to notifications about CORD-19 at:  https://share.hsforms.com/1cM7MMF68RqCdbBKTcyN7VQ3ioxm
-
 ### Projects using CORD-19
 
-Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.* 
+This is a Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.*  Our focus here is to collect community efforts that might not be discoverable because systems and demos don't always translate to papers (which we can find via citations of CORD-19). 
 
-Missing yours?  Email us!
+Missing yours or incomplete data?  Let us know using this [Google Form](https://forms.gle/s48a9RFoyBxxV9J7A) or [email](#email) us!

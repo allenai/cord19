@@ -2,7 +2,7 @@
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our arXiv preprint for an in-depth description of how it was created:  https://arxiv.org/abs/2004.10706
 
-*We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for finding and reading papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
+*We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for directly consuming (reading) papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
 
 
 *While CORD-19 was initially released on 2020-03-13, the current schema is defined base on an update on 2020-05-26.  Older versions of CORD-19 will not necessarily adhere to exactly the schema defined in this README.  Please reach out for help on this if working with old CORD-19 versions.*

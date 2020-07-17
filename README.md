@@ -2,8 +2,13 @@
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our arXiv preprint for an in-depth description of how it was created:  https://arxiv.org/abs/2004.10706
 
-*We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for directly consuming (reading) papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
+### Updates
 
+* 2020-07-09 - CORD-19 presented at the NLP-COVID workshop.
+
+### Important notes
+
+*We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for directly consuming (reading) papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
 
 *While CORD-19 was initially released on 2020-03-13, the current schema is defined base on an update on 2020-05-26.  Older versions of CORD-19 will not necessarily adhere to exactly the schema defined in this README.  Please reach out for help on this if working with old CORD-19 versions.*
 
@@ -171,16 +176,17 @@ Please email `lucyw@allenai.org` and `kylel@allenai.org` for any questions or co
 
 ### Citing CORD-19
 
-Please cite our preprint https://arxiv.org/abs/2004.10706 if using our corpus for your work.  The BibTeX is below:
+Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews on OpenReview: https://openreview.net/forum?id=0gLzHrE_t3z.  The paper will be available in the ACL Anthology shortly (BibTeX below).  In the meantime, please see the preprint on arXiv: https://arxiv.org/abs/2004.10706
 
 ```
-@misc{wang-lo-2020-cord19,
+@inproceedings{wang-lo-2020-cord19,
     title={{CORD-19: The Covid-19 Open Research Dataset}},
     author={Lucy Lu Wang and Kyle Lo and Yoganand Chandrasekhar and Russell Reas and Jiangjiang Yang and Darrin Eide and Kathryn Funk and Rodney Kinney and Ziyang Liu and William Merrill and Paul Mooney and Dewey Murdick and Devvret Rishi and Jerry Sheehan and Zhihong Shen and Brandon Stilson and Alex D. Wade and Kuansan Wang and Chris Wilhelm and Boya Xie and Douglas Raymond and Daniel S. Weld and Oren Etzioni and Sebastian Kohlmeier},
     year={2020},
-    eprint={2004.10706},
-    archivePrefix={arXiv},
-    primaryClass={cs.DL}
+    booktitle={Proceedings of the Workshop on {NLP} for {COVID-19} at {ACL 2020}},
+    month = jul,
+    url = "https://arxiv.org/abs/2004.10706",
+    publisher = "Association for Computational Linguistics”
 }
 ```
 

@@ -156,7 +156,9 @@ The JSONs are only meant for representing the full text of the PDF in a structur
 
 
 #### How do you handle paper objects like tables, figures, equations?
-We currently release only the main body text content of these papers, which does not include tables and figures. We’re currently looking into how to best support these. As for equations, we do not do anything special here – the symbols are treated as text and should be included in the text blobs.
+Many papers in CORD-19 include HTML table parses. These table parses are available in the document parse files under `ref_entries` of type table. Note: not *all* tables will have HTML parses. These parses leverage IBM Watson Discovery capabilities (more details can be found in our paper).
+
+Figure images are currently not available. We’re currently looking into how to best support these. As for equations, we do not do anything special here – the symbols are treated as text and should be included in the text blobs.
 
 #### What should we do if both PDF and PMC JSONs exist?  Or if there are multiple PDF JSONs?
 We view these as different attempts/views to represent the same paper/document.  Some are going to be higher quality than others.  Treat these are separate representations of the same document – you can choose to use one, both, neither (i.e. just use the metadata fields).  On average, we believe the PMC JSONs are cleaner than the PDF JSONs but that’s not necessarily true. 

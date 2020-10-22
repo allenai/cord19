@@ -1,6 +1,6 @@
 # CORD-19
 
-CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our arXiv preprint for an in-depth description of how it was created:  https://arxiv.org/abs/2004.10706
+CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our paper for an in-depth description of how it was created:  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1/
 
 ### Updates
 
@@ -178,17 +178,18 @@ Please email `lucyw@allenai.org` and `kylel@allenai.org` for any questions or co
 
 ### Citing CORD-19
 
-Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews on OpenReview: https://openreview.net/forum?id=0gLzHrE_t3z.  The paper will be available in the ACL Anthology shortly (BibTeX below).  In the meantime, please see the preprint on arXiv: https://arxiv.org/abs/2004.10706
+Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews on OpenReview: https://openreview.net/forum?id=0gLzHrE_t3z.  The paper is available in the ACL Anthology (BibTeX below):  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1
 
 ```
-@inproceedings{wang-lo-2020-cord19,
-    title={{CORD-19: The Covid-19 Open Research Dataset}},
-    author={Lucy Lu Wang and Kyle Lo and Yoganand Chandrasekhar and Russell Reas and Jiangjiang Yang and Darrin Eide and Kathryn Funk and Rodney Kinney and Ziyang Liu and William Merrill and Paul Mooney and Dewey Murdick and Devvret Rishi and Jerry Sheehan and Zhihong Shen and Brandon Stilson and Alex D. Wade and Kuansan Wang and Chris Wilhelm and Boya Xie and Douglas Raymond and Daniel S. Weld and Oren Etzioni and Sebastian Kohlmeier},
-    year={2020},
-    booktitle={Proceedings of the Workshop on {NLP} for {COVID-19} at {ACL 2020}},
+@inproceedings{wang-etal-2020-cord,
+    title = "{CORD-19}: The {COVID-19} Open Research Dataset",
+    author = "Wang, Lucy Lu  and Lo, Kyle  and Chandrasekhar, Yoganand  and Reas, Russell  and Yang, Jiangjiang  and Burdick, Doug  and Eide, Darrin  and Funk, Kathryn  and Katsis, Yannis  and Kinney, Rodney Michael  and Li, Yunyao  and Liu, Ziyang  and Merrill, William  and Mooney, Paul  and Murdick, Dewey A.  and Rishi, Devvret  and Sheehan, Jerry  and Shen, Zhihong  and Stilson, Brandon  and Wade, Alex D.  and Wang, Kuansan  and Wang, Nancy Xin Ru  and Wilhelm, Christopher  and Xie, Boya  and Raymond, Douglas M.  and Weld, Daniel S.  and Etzioni, Oren  and Kohlmeier, Sebastian",
+    booktitle = "Proceedings of the 1st Workshop on {NLP} for {COVID-19} at {ACL} 2020",
     month = jul,
-    url = "https://arxiv.org/abs/2004.10706",
-    publisher = "Association for Computational Linguistics”
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1"
 }
 ```
 

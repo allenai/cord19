@@ -18,7 +18,7 @@ Download CORD-19 at https://www.semanticscholar.org/cord19/download.
 
 ### Overview
 
-CORD-19 is released **daily**.  Each version of the corpus is tagged with a datestamp (e.g. `2020-05-26`).  Releases look like:
+CORD-19 is released **weekly**.  Each version of the corpus is tagged with a datestamp (e.g. `2020-05-26`).  Releases look like:
 
 ```
 |-- 2020-05-26/

@@ -2,9 +2,15 @@
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our paper for an in-depth description of how it was created:  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1/
 
+*The final version of CORD-19 is planned for release on June 2, 2022.* Since we launched the dataset on March 13, 2020, we have released an updated version of the dataset almost every week.  Starting from around 40K articles in its first version, the dataset has grown to index over 1M papers, and includes full text content for nearly 370K papers. We thank you for your support and feedback throughout this process. For alternative data sources, see [Other resources](#other-resources).
+
+
 ### Updates
 
-* 2020-07-09 - CORD-19 presented at the NLP-COVID workshop.
+* _2022-06-02_ - _Planned final release of CORD-19_
+* 2021-03-01 - [Review article](https://academic.oup.com/bib/article/22/2/781/6024738) published in Briefings in Bioinformatics
+* 2020-07-09 - CORD-19 [presented](https://arxiv.org/pdf/2004.10706.pdf) at the NLP-COVID workshop.
+* 2020-03-13 - CORD-19 initial release
 
 ### Important notes
 
@@ -77,7 +83,7 @@ cord_uid_to_text = defaultdict(list)
 with open('metadata.csv') as f_in:
     reader = csv.DictReader(f_in)
     for row in reader:
-    
+
         # access some metadata
         cord_uid = row['cord_uid']
         title = row['title']
@@ -90,7 +96,7 @@ with open('metadata.csv') as f_in:
             for json_path in row['pdf_json_files'].split('; '):
                 with open(json_path) as f_json:
                     full_text_dict = json.load(f_json)
-                    
+
                     # grab introduction section from *some* version of the full text
                     for paragraph_dict in full_text_dict['body_text']:
                         paragraph_text = paragraph_dict['text']
@@ -127,7 +133,7 @@ We recommend everyone work with `metadata.csv` as the starting point.  This file
 - `authors`:  A `List[str]`-valued field for the authors of the paper.  Each author name is in `Last, First Middle` format and semicolon-separated.
 - `journal`:  A `str`-valued field for the paper journal.  Strings are not normalized (e.g. `BMJ` and `British Medical Journal` can both exist). Empty string if unknown.
 - `mag_id`:  Deprecated, but originally an `int`-valued field for the paper as represented in the Microsoft Academic Graph.
-- `who_covidence_id`:  A `str`-valued field for the ID assigned by the WHO for this paper.  Format looks like `#72306`. 
+- `who_covidence_id`:  A `str`-valued field for the ID assigned by the WHO for this paper.  Format looks like `#72306`.
 - `arxiv_id`:  A `str`-valued field for the arXiv ID of this paper.
 - `pdf_json_files`:  A `List[str]`-valued field containing paths from the root of the current data dump version to the parses of the paper PDFs into JSON format.  Multiple paths are semicolon-separated.  Example: `document_parses/pdf_json/4eb6e165ee705e2ae2a24ed2d4e67da42831ff4a.json; document_parses/pdf_json/d4f0247db5e916c20eae3f6d772e8572eb828236.json`
 - `pmc_json_files`:  A `List[str]`-valued field.  Same as above, but corresponding to the full text XML files downloaded from PMC, parsed into the same JSON format as above.
@@ -161,7 +167,7 @@ Many papers in CORD-19 include HTML table parses. These table parses are availab
 Figure images are currently not available. We’re currently looking into how to best support these. As for equations, we do not do anything special here – the symbols are treated as text and should be included in the text blobs.
 
 #### What should we do if both PDF and PMC JSONs exist?  Or if there are multiple PDF JSONs?
-We view these as different attempts/views to represent the same paper/document.  Some are going to be higher quality than others.  Treat these are separate representations of the same document – you can choose to use one, both, neither (i.e. just use the metadata fields).  On average, we believe the PMC JSONs are cleaner than the PDF JSONs but that’s not necessarily true. 
+We view these as different attempts/views to represent the same paper/document.  Some are going to be higher quality than others.  Treat these are separate representations of the same document – you can choose to use one, both, neither (i.e. just use the metadata fields).  On average, we believe the PMC JSONs are cleaner than the PDF JSONs but that’s not necessarily true.
 
 #### Why can the same `sha` appear for different `cord_uid`?
 Let’s take a look at examples `cord_uid=d9v5xtx7` and `cord_uid=8avkjc84`. They both share PDF `sha=5d0d0bd116976e1412c10a84902894999df4a342`. These are two papers we sourced from Elsevier. If you follow the URLs, you’ll notice that they actually retrieve the same PDF despite different having different DOIs. This is an upstream error from the publisher, which we can’t necessarily do anything about. Hopefully the number of these cases is small.
@@ -196,6 +202,18 @@ Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews o
 
 ### Projects using CORD-19
 
-This is a Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.*  Our focus here is to collect community efforts that might not be discoverable because systems and demos don't always translate to papers (which we can find via citations of CORD-19). 
+This is a Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.*  Our focus here is to collect community efforts that might not be discoverable because systems and demos don't always translate to papers (which we can find via citations of CORD-19).
 
 Missing yours or incomplete data?  Let us know using this [Google Form](https://forms.gle/s48a9RFoyBxxV9J7A) or [email](#email) us!
+
+### Other resources
+
+*S2ORC-doc2json*: We use this library to process PDFs and PubMed JATS XML into the format released in CORD-19. This library can be adapted to produce your own versions of the dataset. Source code and instructions for using the library can be found [here](https://github.com/allenai/s2orc-doc2json).
+
+*Semantic Scholar API*: Metadata, paper abstracts, and citation information for papers we index are available through our API. Documentation [here](https://www.semanticscholar.org/product/api).
+
+*S2ORC*: A dataset of millions of full text papers processed in the same way as CORD-19, but covering many different fields of science. Not regularly updated; intended for offline research, like model development. Available [here](https://github.com/allenai/s2orc).
+
+*PubMed Central*: The National Library of Medicine (NLM) continues to collaborate with publishers to make COVID-19 and coronavirus-related publications and associated data immediately accessible in PubMed Central (PMC) in human- and machine-readable forms.  Available [here](https://www.ncbi.nlm.nih.gov/pmc/about/covid-19/).
+
+*LitCovid*: NLM continues to update its LitCovid dataset of COVID-19 related publications to facilitate text mining. Available [here](https://www.ncbi.nlm.nih.gov/research/coronavirus/).

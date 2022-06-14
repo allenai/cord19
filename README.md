@@ -7,7 +7,7 @@ CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus re
 
 ### Updates
 
-* _2022-06-02_ - _Planned final release of CORD-19_
+* _2022-06-02_ - Final release of CORD-19
 * 2021-03-01 - [Review article](https://academic.oup.com/bib/article/22/2/781/6024738) published in Briefings in Bioinformatics
 * 2020-07-09 - CORD-19 [presented](https://arxiv.org/pdf/2004.10706.pdf) at the NLP-COVID workshop.
 * 2020-03-13 - CORD-19 initial release

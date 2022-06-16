@@ -2,7 +2,7 @@
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our paper for an in-depth description of how it was created:  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1/
 
-*The final version of CORD-19 is planned for release on June 2, 2022.* Since we launched the dataset on March 13, 2020, we have released an updated version of the dataset almost every week.  Starting from around 40K articles in its first version, the dataset has grown to index over 1M papers, and includes full text content for nearly 370K papers. We thank you for your support and feedback throughout this process. For more information, please see this [blog post](https://blog.allenai.org/sunsetting-cord-19-239fb2f9ff4a). A list of alternate data resources are provided under [Other resources](#other-resources).
+*The final version of CORD-19 was released on June 2, 2022.* Since we launched the dataset on March 13, 2020, we have released an updated version of the dataset almost every week.  Starting from around 40K articles in its first version, the dataset has grown to index over 1M papers, and includes full text content for nearly 370K papers. We thank you for your support and feedback throughout this process. For more information, please see this [blog post](https://blog.allenai.org/sunsetting-cord-19-239fb2f9ff4a). A list of alternate data resources are provided under [Other resources](#other-resources).
 
 
 ### Updates

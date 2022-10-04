@@ -1,28 +1,55 @@
-# CORD-19
+# The COVID-19 Open Research Dataset (CORD-19)
 
 CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus research.  It's curated and maintained by the Semantic Scholar team at the Allen Institute for AI to support text mining and NLP research.  Please read our paper for an in-depth description of how it was created:  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1/
 
 *The final version of CORD-19 was released on June 2, 2022.* Since we launched the dataset on March 13, 2020, we have released an updated version of the dataset almost every week.  Starting from around 40K articles in its first version, the dataset has grown to index over 1M papers, and includes full text content for nearly 370K papers. We thank you for your support and feedback throughout this process. For more information, please see this [blog post](https://blog.allenai.org/sunsetting-cord-19-239fb2f9ff4a). A list of alternate data resources are provided under [Other resources](#other-resources).
 
 
-### Updates
+## Updates
 
 * 2022-06-02 - Final release of CORD-19
 * 2021-03-01 - [Review article](https://academic.oup.com/bib/article/22/2/781/6024738) published in Briefings in Bioinformatics
 * 2020-07-09 - CORD-19 [presented](https://arxiv.org/pdf/2004.10706.pdf) at the NLP-COVID workshop.
 * 2020-03-13 - CORD-19 initial release
 
-### Important notes
+## Important notes
 
 *We have performed some data cleaning that is sufficient to fuel most text mining & NLP research efforts.  But we do not intend to provide sufficient cleaning for this data to be usable for directly consuming (reading) papers about COVID-19 or coronaviruses.  There will always be some amount of error, which will make CORD-19 more/less usable for certain applications than others.  We leave it up to the user to make this determination, though please feel free to consult us for recommendations.*
 
 *While CORD-19 was initially released on 2020-03-13, the current schema is defined base on an update on 2020-05-26.  Older versions of CORD-19 will not necessarily adhere to exactly the schema defined in this README.  Please reach out for help on this if working with old CORD-19 versions.*
 
-### Download
+## Download
 
-Download CORD-19 at https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html. 
+All version of CORD-19 can be found [HERE](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html). 
 
-### Overview
+First published version (2020-03-13): [Download Link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-03-13.tar.gz) `(size: 0.3Gb, md5: a36fe181, sha1: 8fbea927)`
+
+Last published version (2022-06-02): [Download Link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2022-06-02.tar.gz) `(size: 18.7Gb, md5: c557069e, sha1: dd2c32bc)`
+
+
+### Dataset Versions Used for TREC-COVID Shared Task
+
+TREC-COVID Shared Task Website: [https://ir.nist.gov/covidSubmit/index.html](https://ir.nist.gov/covidSubmit/index.html)
+
+
+| TREC-COVID   | Date        | Changelog    | Link to download                  | md5       | sha1      |
+| ------------ | ----------- | ------------ | --------------------------------- | --------- | --------- |
+| Round 1      | 2020-04-10  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-10/changelog) | [cord-19_2020-04-10.tar.gz (1.5GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-04-10.tar.gz) | f4c3e742  | 4980d8ee  |
+| Round 2      | 2020-05-01  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-01/changelog) | [cord-19_2020-05-01.tar.gz (1.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-01.tar.gz) | e8c56920  | dc22dbc9  |
+| Round 3      | 2020-05-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-19/changelog) | [cord-19_2020-05-19.tar.gz (2.8GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-19.tar.gz)	| 6424de9c  | 1781b935  |
+| Round 4      | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | 47b61215  | fdd0490e  |
+| Round 5      | 2020-07-16  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-07-16/changelog) | [cord-19_2020-07-16.tar.gz (3.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-07-16.tar.gz) | 018c4bc4  | 7adcf31a  |
+
+### Dataset Versions Used for EPIC-QA Shared Task
+
+EPIC-QA Shared Task Website: [https://bionlp.nlm.nih.gov/epic_qa/](https://bionlp.nlm.nih.gov/epic_qa/)
+
+| EPIC-QA            | Date        | Changelog    | Link to download                  | md5       | sha1      |
+| ------------------ | ----------- | ------------ | --------------------------------- | --------- | --------- |
+| Preliminary round  | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | 47b61215  | fdd0490e  |
+| Primary round      | 2020-10-22  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-10-22/changelog) | [cord-19_2020-10-22.tar.gz (5.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-10-22.tar.gz) | 7cb9e743  | 7efe285f  |
+
+## Overview
 
 CORD-19 is released **weekly**.  Each version of the corpus is tagged with a datestamp (e.g. `2020-05-26`).  Releases look like:
 
@@ -67,7 +94,7 @@ When `document_parses.tar.gz` is uncompressed, it is a directory:
 
 
 
-### Example usage
+## Example usage
 
 We recommend everyone primarily use `metadata.csv` & augment data when needed with full text in `document_parses/`.  For example, let's say we wanted to collect a bunch of Titles, Abstracts, and Introductions of papers.  In Python, such a script might look like:
 
@@ -116,7 +143,7 @@ with open('metadata.csv') as f_in:
         })
 ```
 
-### `metadata.csv` overview
+## `metadata.csv` overview
 
 We recommend everyone work with `metadata.csv` as the starting point.  This file is comma-separated with the following columns:
 
@@ -141,7 +168,7 @@ We recommend everyone work with `metadata.csv` as the starting point.  This file
 - `s2_id`:  A `str`-valued field containing the Semantic Scholar ID for this paper.  Can be used with the Semantic Scholar API (e.g. `s2_id=9445722` corresponds to `http://api.semanticscholar.org/corpusid:9445722`)
 
 
-### Questions about CORD-19
+## Questions about CORD-19
 
 #### Why can the same `cord_uid` appear in multiple rows?
 This is a very tricky issue, and we have not decided on the best way forward. To explain, let’s take example `cord_uid=hox2xwjg`. Examining their respective rows in the metadata file, we see that they are the same paper, but sent from different sources (Elsevier, PMC). The Elsevier row has DOI and PDF, but the PMC row doesn’t. Furthermore, the PMC ID, publication date, and URL for each of these rows is different.
@@ -172,7 +199,7 @@ We view these as different attempts/views to represent the same paper/document. 
 #### Why can the same `sha` appear for different `cord_uid`?
 Let’s take a look at examples `cord_uid=d9v5xtx7` and `cord_uid=8avkjc84`. They both share PDF `sha=5d0d0bd116976e1412c10a84902894999df4a342`. These are two papers we sourced from Elsevier. If you follow the URLs, you’ll notice that they actually retrieve the same PDF despite different having different DOIs. This is an upstream error from the publisher, which we can’t necessarily do anything about. Hopefully the number of these cases is small.
 
-# Contact
+## Contact
 
 ### Mailing list
 
@@ -182,7 +209,7 @@ Subscribe to notifications about CORD-19 at:  https://share.hsforms.com/1cM7MMF6
 
 Please email `lucyw@allenai.org` and `kylel@allenai.org` for any questions or concerns.
 
-### Citing CORD-19
+## Citing CORD-19
 
 Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews on OpenReview: https://openreview.net/forum?id=0gLzHrE_t3z.  The paper is available in the ACL Anthology (BibTeX below):  https://www.aclweb.org/anthology/2020.nlpcovid19-acl.1
 
@@ -200,13 +227,13 @@ Our paper was accepted to the NLP-COVID workshop at ACL 2020.  See the reviews o
 ```
 
 
-### Projects using CORD-19
+## Projects using CORD-19
 
 This is a Google Sheet tracking [systems and demos](https://docs.google.com/spreadsheets/d/1WKlRwaRBpbBE1umT2DsQ_NL4QqK5D2lO_ab7siGMnHA/edit?usp=sharing) that use CORD-19.  *Projects are listed in random order.*  Our focus here is to collect community efforts that might not be discoverable because systems and demos don't always translate to papers (which we can find via citations of CORD-19).
 
 Missing yours or incomplete data?  Let us know using this [Google Form](https://forms.gle/s48a9RFoyBxxV9J7A) or [email](#email) us!
 
-### Other resources
+## Other resources
 
 *S2ORC-doc2json*: We use this library to process PDFs and PubMed JATS XML into the format released in CORD-19. This library can be adapted to produce your own versions of the dataset. Source code and instructions for using the library can be found [here](https://github.com/allenai/s2orc-doc2json).
 

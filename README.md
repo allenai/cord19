@@ -33,7 +33,7 @@ TREC-COVID Shared Task Website: [https://ir.nist.gov/covidSubmit/index.html](htt
 
 
 | TREC-COVID   | Date        | Changelog    | Link to download                  | md5       | sha1      |
-| ------------ | ----------- | ------------ | --------------------------------- | --------- | --------- |
+| :----------- | :---------- | :----------- | :-------------------------------- | :-------- | :-------- |
 | Round 1      | 2020-04-10  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-10/changelog) | [cord-19_2020-04-10.tar.gz (1.5GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-04-10.tar.gz) | f4c3e742  | 4980d8ee  |
 | Round 2      | 2020-05-01  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-01/changelog) | [cord-19_2020-05-01.tar.gz (1.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-01.tar.gz) | e8c56920  | dc22dbc9  |
 | Round 3      | 2020-05-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-19/changelog) | [cord-19_2020-05-19.tar.gz (2.8GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-19.tar.gz)	| 6424de9c  | 1781b935  |
@@ -45,7 +45,7 @@ TREC-COVID Shared Task Website: [https://ir.nist.gov/covidSubmit/index.html](htt
 EPIC-QA Shared Task Website: [https://bionlp.nlm.nih.gov/epic_qa/](https://bionlp.nlm.nih.gov/epic_qa/)
 
 | EPIC-QA            | Date        | Changelog    | Link to download                  | md5       | sha1      |
-| ------------------ | ----------- | ------------ | --------------------------------- | --------- | --------- |
+| :----------------- | :---------- | :----------- | :-------------------------------- | :-------- | :-------- |
 | Preliminary round  | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | 47b61215  | fdd0490e  |
 | Primary round      | 2020-10-22  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-10-22/changelog) | [cord-19_2020-10-22.tar.gz (5.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-10-22.tar.gz) | 7cb9e743  | 7efe285f  |
 

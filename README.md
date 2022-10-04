@@ -20,7 +20,7 @@ CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus re
 
 ## Download
 
-All version of CORD-19 can be found [HERE](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html). 
+**All version of CORD-19 can be found [HERE](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html).**
 
 First published version (2020-03-13): [Download Link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-03-13.tar.gz) `(size: 0.3Gb, md5: a36fe181, sha1: 8fbea927)`
 
@@ -34,11 +34,11 @@ TREC-COVID Shared Task Website: [https://ir.nist.gov/covidSubmit/index.html](htt
 
 | TREC-COVID   | Date        | Changelog    | Link to download                  | md5       | sha1      |
 | :----------- | :---------- | :----------- | :-------------------------------- | :-------- | :-------- |
-| Round 1      | 2020-04-10  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-10/changelog) | [cord-19_2020-04-10.tar.gz (1.5GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-04-10.tar.gz) | f4c3e742  | 4980d8ee  |
-| Round 2      | 2020-05-01  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-01/changelog) | [cord-19_2020-05-01.tar.gz (1.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-01.tar.gz) | e8c56920  | dc22dbc9  |
-| Round 3      | 2020-05-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-19/changelog) | [cord-19_2020-05-19.tar.gz (2.8GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-19.tar.gz)	| 6424de9c  | 1781b935  |
-| Round 4      | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | 47b61215  | fdd0490e  |
-| Round 5      | 2020-07-16  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-07-16/changelog) | [cord-19_2020-07-16.tar.gz (3.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-07-16.tar.gz) | 018c4bc4  | 7adcf31a  |
+| Round 1      | 2020-04-10  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-04-10/changelog) | [cord-19_2020-04-10.tar.gz (1.5GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-04-10.tar.gz) | `f4c3e742`  | `4980d8ee`  |
+| Round 2      | 2020-05-01  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-01/changelog) | [cord-19_2020-05-01.tar.gz (1.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-01.tar.gz) | `e8c56920`  | `dc22dbc9`  |
+| Round 3      | 2020-05-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-05-19/changelog) | [cord-19_2020-05-19.tar.gz (2.8GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-05-19.tar.gz)	| `6424de9c`  | `1781b935`  |
+| Round 4      | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | `47b61215`  | `fdd0490e`  |
+| Round 5      | 2020-07-16  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-07-16/changelog) | [cord-19_2020-07-16.tar.gz (3.7GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-07-16.tar.gz) | `018c4bc4`  | `7adcf31a`  |
 
 ### Dataset Versions Used for EPIC-QA Shared Task
 
@@ -46,8 +46,8 @@ EPIC-QA Shared Task Website: [https://bionlp.nlm.nih.gov/epic_qa/](https://bionl
 
 | EPIC-QA            | Date        | Changelog    | Link to download                  | md5       | sha1      |
 | :----------------- | :---------- | :----------- | :-------------------------------- | :-------- | :-------- |
-| Preliminary round  | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | 47b61215  | fdd0490e  |
-| Primary round      | 2020-10-22  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-10-22/changelog) | [cord-19_2020-10-22.tar.gz (5.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-10-22.tar.gz) | 7cb9e743  | 7efe285f  |
+| Preliminary round  | 2020-06-19  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-06-19/changelog) | [cord-19_2020-06-19.tar.gz (3.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-06-19.tar.gz) | `47b61215`  | `fdd0490e`  |
+| Primary round      | 2020-10-22  | [link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-10-22/changelog) | [cord-19_2020-10-22.tar.gz (5.3GB)](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-10-22.tar.gz) | `7cb9e743`  | `7efe285f`  |
 
 ## Overview
 

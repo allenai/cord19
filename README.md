@@ -20,7 +20,7 @@ CORD-19 is a corpus of academic papers about COVID-19 and related coronavirus re
 
 ## Download
 
-**All version of CORD-19 can be found [HERE](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html).**
+**All versions of CORD-19 can be found [HERE](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html).**
 
 First published version (2020-03-13): [Download Link](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases/cord-19_2020-03-13.tar.gz) `(size: 0.3Gb, md5: a36fe181, sha1: 8fbea927)`
 
